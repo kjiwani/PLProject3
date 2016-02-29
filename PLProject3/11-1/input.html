@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input</title>
+    <script type="text/javascript">
+        function displayOutput() {
+            var first_name = document.getElementById("first_name").value;
+            if (first_name.length === 0) {
+                alert("Please enter a valid input");
+                return;
+            }
+            
+            var last_name = document.getElementById("last_name").value;
+            if (last_name.length === 0) {
+                alert("Please enter a valid input");
+                return;
+            }
+            
+            var email = document.getElementById("email").value;
+            if (email.length === 0) {
+                alert("Please enter a valid input");
+                return;
+            }
+            
+            var cust_num = document.getElementById("cust_num").value;
+            if (cust_num.length === 0) {
+                alert("Please enter a valid input");
+                return;
+            }
+            
+           document.getElementById("result").innerHTML = "You have entered " + first_name + last_name + email + cust_num;
+            
+        }
+    </script>
+</head>
+<body>
+    <h1 id="result">Please enter all necessary information:</h1>
+    <input type="text" id="first_name" autofocus value = "First Name" />
+    <br>
+    <input type="text" id="last_name" autofocus value = "Last Name" />
+    <br>
+    <input type="text" id="email" autofocus value = "Email Address" />
+    <br>
+    <input type="text" id="cust_num" autofocus value = "Customer Number" />
+    <br>
+    <input type="submit" value="Submit" onclick="displayOutput()" />
+</body>
+</html>
