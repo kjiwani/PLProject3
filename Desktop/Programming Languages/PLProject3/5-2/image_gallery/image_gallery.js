@@ -5,7 +5,8 @@ $(document).ready(function() {
 		swappedImage.src = $(this).attr("href");
 	});
 	
-	// set up event handlers for links    
+	// set up event handlers for links
+	// HERE IS THE NEW COMMENT LOOOOOOK!!!
 	$("#image_list a").click(function(evt) {
 		// swap image
 		var imageURL = $(this).attr("href");
