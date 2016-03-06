@@ -1,37 +1,42 @@
-$(document).ready(function displayOutput() {
-            var first_name = document.getElementById("first_name").value;
-            if (first_name.length === 0) {
-                alert("Please enter a valid input");
-                return;
+        function employee(first, last, email, ssn){
+            this.first="";
+            this.last="";
+            this.email="";
+            this.ssn=0;
+            this.info=first + " " + last + " " + email + " " + ssn;
+            this.set_first=function(new_first){
+                this.first=new_first;  
             }
-            
-            var last_name = document.getElementById("last_name").value;
-            if (last_name.length === 0) {
-                alert("Please enter a valid input");
-                return;
+            this.set_last=function(new_last){
+                this.last=new_last;
             }
-            
-            var email = document.getElementById("email").value;
-            if (email.length === 0) {
-                alert("Please enter a valid input");
-                return;
+            this.set_email=function(new_email){
+                this.email=new_email;  
             }
-            
-            var ssn = document.getElementById("cust_num").value;
-            if (cust_num.length === 0) {
-                alert("Please enter a valid input");
-                return;
+            this.set_ssn=function(new_ssn){
+                this.ssn=new_ssn;
             }
-            
-            var html_string = "You have entered: <br>" + "Name: " + first_name + " " + last_name + "<br>Email: " + email + "<br>Social Security Number: " + ssn; 
-
-            
-           document.getElementById("result").innerHTML = html_string;
-        
-            document.getElementById('btnHolder').innerHTML = '<input type="button" value="Continue?" />'
-
-        document.getElementById("btnHolder").onclick = function () {
+            this.showInfo=function(){
+                this.info="You have entered: <br>Name: " + this.first + " " + this.last + "<br>Email: " + this.email + "<br>Social Security Number: " + this.ssn;
+//                alert(this.info);
+                document.write(this.info);
+                
+            document.write('<br><br><input id="btnholder" type = "button" value="Continue?"/>');
+            document.getElementById("btnholder").onclick = function () {
         location.href = "index.html";
     };
-            
-        };
+          
+        }
+        }
+        function userInput(){
+            var emp = new employee();
+            emp.set_first(document.getElementById('first_name').value);
+            emp.set_last(document.getElementById('last_name').value);
+            emp.set_email(document.getElementById('email').value);
+            emp.set_ssn(document.getElementById('ssn').value);
+            emp.showInfo();
+            emp.set_first("");
+            emp.set_last("");
+            emp.set_email("");
+            emp.set_ssn(0);
+        }

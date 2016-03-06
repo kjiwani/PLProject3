@@ -74,48 +74,11 @@
 <head>
     <title>User Input</title>
     <h1>Please enter all information</h1>
-    <script>
-        function customer(first, last, email, cust_num){
-            this.first="";
-            this.last="";
-            this.email="";
-            this.cust_num=0;
-            this.info=first + " " + last + " " + email + " " + cust_num;
-            this.set_first=function(new_first){
-                this.first=new_first;  
-            }
-            this.set_last=function(new_last){
-                this.last=new_last;
-            }
-            this.set_email=function(new_email){
-                this.email=new_email;  
-            }
-            this.set_custNum=function(new_custNum){
-                this.cust_num=new_custNum;
-            }
-            this.showInfo=function(){
-                this.info="You have entered: <br>Name: " + this.first + " " + this.last + "<br>Email: " + this.email + "<br>Customer number: " + this.cust_num;
-//                alert(this.info);
-                document.write(this.info);
-document.write('<br><br><input type="button" value="Continue?"/>');
-          
-        }
-        }
-        function userInput(){
-            var cust = new customer();
-            cust.set_first(document.getElementById('first_name').value);
-            cust.set_last(document.getElementById('last_name').value);
-            cust.set_email(document.getElementById('email').value);
-            cust.set_custNum(document.getElementById('cust_num').value);
-            cust.showInfo();
-            document.getElementById('first_name').value="";
-            document.getElementById('last_name').value="";
-            document.getElementById('email').value="";
-            document.getElementById('cust_num').value=0;
-        }
-    </script>
+    <script type="text/javascript" src="customer.js"> </script>
 </head>
 <body>
+    <script type="text/javascript">
+    </script>
     <label for="first_name">First Name:</label>
     <input type="text" id="first_name"/>
     <br>
@@ -129,5 +92,10 @@ document.write('<br><br><input type="button" value="Continue?"/>');
     <input type="text" id="cust_num"/>
     <br>
     <input type="button" value="Submit" onclick="userInput()" />
+    <br>
+    <br>
+    <!-- <div id="btnHolder"></div> -->
+
 </body>
+
 </html>
