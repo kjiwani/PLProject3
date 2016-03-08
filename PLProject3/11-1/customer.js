@@ -26,18 +26,22 @@ function customer(first, last, email, cust_num){
         location.href = "index.html";
     };
 
-
-
-
           
         }
         }
         function userInput(){
             var cust = new customer();
-            cust.set_first(document.getElementById('first_name').value);
-            cust.set_last(document.getElementById('last_name').value);
-            cust.set_email(document.getElementById('email').value);
-            cust.set_custNum(document.getElementById('cust_num').value);
+            
+            var cus = {
+                first_name: cust.set_first(document.getElementById('first_name').value),
+                last_name: cust.set_last(document.getElementById('last_name').value),
+                email: cust.set_email(document.getElementById('email').value),
+                cust_num: cust.set_custNum(document.getElementById('cust_num').value)}
+            
+//            cust.set_first(document.getElementById('first_name').value);
+//            cust.set_last(document.getElementById('last_name').value);
+//            cust.set_email(document.getElementById('email').value);
+//            cust.set_custNum(document.getElementById('cust_num').value);
             cust.showInfo();
             cust.set_first("");
             cust.set_last("");

@@ -30,10 +30,17 @@
         }
         function userInput(){
             var emp = new employee();
-            emp.set_first(document.getElementById('first_name').value);
-            emp.set_last(document.getElementById('last_name').value);
-            emp.set_email(document.getElementById('email').value);
-            emp.set_ssn(document.getElementById('ssn').value);
+            var empl = {
+                first_name: emp.set_first(document.getElementById('first_name').value),
+                last_name: emp.set_last(document.getElementById('last_name').value), 
+                email: emp.set_email(document.getElementById('email').value),
+                ssn: emp.set_ssn(document.getElementById('ssn').value)
+            }
+            
+//            emp.set_first(document.getElementById('first_name').value);
+//            emp.set_last(document.getElementById('last_name').value);
+//            emp.set_email(document.getElementById('email').value);
+//            emp.set_ssn(document.getElementById('ssn').value);
             emp.showInfo();
             emp.set_first("");
             emp.set_last("");
