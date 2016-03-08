@@ -6,16 +6,16 @@
             this.info=first + " " + last + " " + email + " " + ssn;
             this.set_first=function(new_first){
                 this.first=new_first;  
-            }
+            };
             this.set_last=function(new_last){
                 this.last=new_last;
-            }
+            };
             this.set_email=function(new_email){
                 this.email=new_email;  
-            }
+            };
             this.set_ssn=function(new_ssn){
                 this.ssn=new_ssn;
-            }
+            };
             this.showInfo=function(){
                 this.info="You have entered: <br>Name: " + this.first + " " + this.last + "<br>Email: " + this.email + "<br>Social Security Number: " + this.ssn;
 //                alert(this.info);

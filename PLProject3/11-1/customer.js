@@ -6,16 +6,16 @@ function customer(first, last, email, cust_num){
             this.info=first + " " + last + " " + email + " " + cust_num;
             this.set_first=function(new_first){
                 this.first=new_first;  
-            }
+            };
             this.set_last=function(new_last){
                 this.last=new_last;
-            }
+            };
             this.set_email=function(new_email){
                 this.email=new_email;  
-            }
+            };
             this.set_custNum=function(new_custNum){
                 this.cust_num=new_custNum;
-            }
+            };
             this.showInfo=function(){
                 this.info="You have entered: <br>Name: " + this.first + " " + this.last + "<br>Email: " + this.email + "<br>Customer number: " + this.cust_num;
                 document.write(this.info);
